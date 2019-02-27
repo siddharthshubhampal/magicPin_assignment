@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Magicpin Assignment</title>
+</head>
+<body>
+	<p>Password: <input type="password" id="pwd"></p>
+	<button onclick="checkPassword()">Test</button>
+	<p id='result'></p>
+</body>
+
+<script type="text/javascript">
+
+  function checkPassword()
+  {
+  	const regex1 = new RegExp("^(?=.{6,})");
+    const regex2 = new RegExp("^.{6,12}$");
+    const regex3 = new RegExp("^(?=.*[a-z])");
+    const regex4 = new RegExp("^(?=.*[A-Z])");
+    const regex5 = new RegExp("^(?=.*[0-9])");
+    const regex6 = new RegExp("^(?=.*[*$_#=@])");
+    const regex7 = new RegExp("^(?=.*[!%()])");
+
+  	let pwd = document.getElementById('pwd').value;
+  	let pwdArray = pwd.split(',');
+    pwdArray.forEach(function(key){
+    	key=key.trim();
+    	let response='';
+    	let flag = false;
+    	if(!regex1.test(key)){
+            response += "Password must be at least 6 characters long."
+        } else if (!regex2.test(key)){
+            response += "Password must be at max 12 characters long."
+        } else if(!regex3.test(key)){
+            response += "Password must contain at least one letter from a-z."
+        } else if(!regex4.test(key)){
+            response += "Password must contain at least one letter from A-Z."
+        } else if(!regex5.test(key)){
+            response += "Password must contain at least one letter from 0-9";
+        } else if(!regex6.test(key)) {
+            response += "Password must contain at least one letter from *$_#=@";
+        } else if(regex7.test(key)) {
+            response += "Password cannot contain %!)(.";
+        } else {
+            flag = true;
+        }
+
+        if (flag){
+        	response = key + ' <span style="color:green">Success</span>';
+        }else{
+        	response = key + ' <span style="color:red">Faliure</span> '+response;
+        }
+        document.getElementById('result').innerHTML=document.getElementById('result').innerHTML+'<br/>'+response;
+    })
+
+  }
+</script>
+
+</body>
+</html>
