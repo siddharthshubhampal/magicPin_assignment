@@ -1,60 +1,329 @@
+
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Magicpin Assignment</title>
+    
+    
+    <title>Magicpin Assignment</title>
+
+    <meta name="fragment" content="!">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="theme-color" content="#338aed" />
+    <meta name="google-site-verification" content="cZQ0ec_BK_klv5OO6jSpvj4UpCD9zAasW8U8iZeYxVg" />
+    <meta name="p:domain_verify" content="7b683b2c7a1a4bde9bd8c5a2575e1583"/>
+    
+    
+    
+    <script type="text/javascript">
+        function imgLoaded(img){
+            var imgWrapper = img.parentNode;
+            imgWrapper.className += imgWrapper.className ? ' loaded' : 'loaded';
+        };
+    </script>
+
+    
+    
+    <link rel="stylesheet" href="https://d1qp59yxlq7zhd.cloudfront.net/static/build/around.e36fe104.css">
+
+    <script type="text/javascript">
+            (function(e,a){if(!a.__SV){var b=window;try{var c,l,i,j=b.location,g=j.hash;c=function(a,b){return(l=a.match(RegExp(b+"=([^&]*)")))?l[1]:null};g&&c(g,"state")&&(i=JSON.parse(decodeURIComponent(c(g,"state"))),"mpeditor"===i.action&&(b.sessionStorage.setItem("_mpcehash",g),history.replaceState(i.desiredHash||"",e.title,j.pathname+j.search)))}catch(m){}var k,h;window.mixpanel=a;a._i=[];a.init=function(b,c,f){function e(b,a){var c=a.split(".");2==c.length&&(b=b[c[0]],a=c[1]);b[a]=function(){b.push([a].concat(Array.prototype.slice.call(arguments,
+        0)))}}var d=a;"undefined"!==typeof f?d=a[f]=[]:f="mixpanel";d.people=d.people||[];d.toString=function(b){var a="mixpanel";"mixpanel"!==f&&(a+="."+f);b||(a+=" (stub)");return a};d.people.toString=function(){return d.toString(1)+".people (stub)"};k="disable time_event track track_pageview track_links track_forms register register_once alias unregister identify name_tag set_config reset people.set people.set_once people.increment people.append people.union people.track_charge people.clear_charges people.delete_user".split(" ");
+        for(h=0;h<k.length;h++)e(d,k[h]);a._i.push([b,c,f])};a.__SV=1.2;b=e.createElement("script");b.type="text/javascript";b.async=!0;b.src="undefined"!==typeof MIXPANEL_CUSTOM_LIB_URL?MIXPANEL_CUSTOM_LIB_URL:"file:"===e.location.protocol&&"//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js".match(/^\/\//)?"https://cdn.mxpnl.com/libs/mixpanel-2-latest.min.js":"//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js";c=e.getElementsByTagName("script")[0];c.parentNode.insertBefore(b,c)}})(document,window.mixpanel||[]);
+        if (document.location.hostname.search("magicpin.in") !== -1) {
+            mixpanel.init("3f11b4085570cb973ae11376d51bd475");
+        }
+        else {
+            mixpanel.init("");   
+        }
+
+    </script>
+    <style type="text/css">
+    	.Success{
+    		position: absolute;
+		    top: 12px;
+		    right: 16px;
+		    width: 54px;
+		    height: 22px;
+		    border-radius: 20px;
+		    background-color: #00ae28;
+		    border: solid 1px #00ae28;
+		    padding: 2px 3px; 
+    	}
+    	.Failure{
+    		position: absolute;
+		    top: 12px;
+		    right: 16px;
+		    width: 54px;
+		    height: 22px;
+		    border-radius: 20px;
+		    background-color: #ff0000;
+		    border: solid 1px #ff0000;
+		    padding: 2px 3px;
+    	}
+    </style>
 </head>
+
 <body>
-	<p>Password: <input type="password" id="pwd"></p>
-	<button onclick="checkPassword()">Test</button>
-	<p id='result'></p>
-</body>
 
-<script type="text/javascript">
+    
+    
+        <header class="site-header" >
+            
+            <div class="container" >
+                <section class="header">
+                    <a href="https://github.com/siddharthshubhampal/magicPin_assignment">
+                        <img class="logo" src='https://d1qp59yxlq7zhd.cloudfront.net/static/images/logo.svg' alt="Magicpin logo - discover deals,discounts and vouchers around you">
+                    </a>
+                    <div class="hamburger-holder" id="react-menu-popover">
+                        <img src='https://d1qp59yxlq7zhd.cloudfront.net/static/images/hamburger.svg' />
+                    </div>
+                </section>
+            </div>
+        </header>
+    
 
-  function checkPassword()
-  {
-  	const regex1 = new RegExp("^(?=.{6,})");
-    const regex2 = new RegExp("^.{6,12}$");
-    const regex3 = new RegExp("^(?=.*[a-z])");
-    const regex4 = new RegExp("^(?=.*[A-Z])");
-    const regex5 = new RegExp("^(?=.*[0-9])");
-    const regex6 = new RegExp("^(?=.*[*$_#=@])");
-    const regex7 = new RegExp("^(?=.*[!%()])");
+    <section class="container" >
+        <ol class="breadcrumbs hide-mb" itemscope itemtype="http://schema.org/BreadcrumbList">
+            
+                <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+                    <span itemprop="name">
+                        <a data-type="breadcrumbs_link" 
+                           data-target="Home"
+                           data-position="1"
+                           itemprop="item" 
+                           href="/">Home</a>
+                    </span>
+                    <meta itemprop="position" content="1" />
+                </li>
+            
+                <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+                    <span itemprop="name">
+                        <a data-type="breadcrumbs_link" 
+                           data-target="Restaurant"
+                           data-position="5"
+                           itemprop="item" 
+                           href="https://magicpin.in/india/New-Delhi/All/Restaurant/">Password Checking Module</a>
+                    </span>
+                    <meta itemprop="position" content="5" />
+                </li>
+            
+        </ol>
+    </section>
 
-  	let pwd = document.getElementById('pwd').value;
-  	let pwdArray = pwd.split(',');
-    pwdArray.forEach(function(key){
-    	key=key.trim();
-    	let response='';
-    	let flag = false;
-    	if(!regex1.test(key)){
-            response += "Password must be at least 6 characters long."
-        } else if (!regex2.test(key)){
-            response += "Password must be at max 12 characters long."
-        } else if(!regex3.test(key)){
-            response += "Password must contain at least one letter from a-z."
-        } else if(!regex4.test(key)){
-            response += "Password must contain at least one letter from A-Z."
-        } else if(!regex5.test(key)){
-            response += "Password must contain at least one letter from 0-9";
-        } else if(!regex6.test(key)) {
-            response += "Password must contain at least one letter from *$_#=@";
-        } else if(regex7.test(key)) {
-            response += "Password cannot contain %!)(.";
-        } else {
-            flag = true;
+    <section class="container around-title">
+        <h1 class="around-you-result-text inline-block">
+            Assignment for Application Developer
+        </h1>
+         <h2 class="city-best-around">
+            
+        </h2>
+    </section>
+
+    <section id="around-you" class="container" style="min-height: 500px">
+        <div class="contain clearfix">
+            <div class="filter-wrapper">
+                <div class="filter-title-wrapper">
+                   
+                    <div class="filter-title">Submitted By</div>
+                    <div class="action-filter hide-mb">
+	                    <ul>
+	                        
+	                            <li style="line-height: 1.43">
+	                                Siddharth S Pal
+	                             </li>
+	                        
+	                            <li style="line-height: 1.43">
+	                               9915102153
+	                             </li>
+	                        	<li style="line-height: 1.43">
+	                                +91-7007010679
+	                             </li>
+	                             <li style="line-height: 1.43">
+	                                +91-8765221829
+	                             </li>
+	                        
+	                    </ul>
+                	</div>
+            	</div>
+            	<div class="filter-inner-wrapper">
+            	</div>
+        	</div>
+            
+      	  	<div class="around-you-wrapper float-left">
+      	  		<section class="related-searches">
+	                    <h3 class="search-header" style="margin: 8px 0px">Password</h3>
+	                    <div class="" style="padding: 10px 0px; ">
+	                     <input type="Password" name="pwd" id="pwd" style="width: 85%;padding: 8px 12px;box-sizing: border-box;border: 2px solid #ECEEF4; border-radius:8px"/>
+	                    <button style="padding: 10px 10px; border-radius: 50%; border: 1px solid #00ae28; background-color: #00ae28; color: white; float: right;margin:0px 15px;" onclick="myfunc()">GO</button>
+	                    </div>
+	                     <input type="checkbox" name="remember" ontoggle="">Show Password</input>
+	            </section>
+
+            	<div class="around-you-result-inner clearfix" id="resultDiv">
+	              <div class="center"  style="padding-bottom: 40px">Enter the passwords seperated with comma and Click on GO button.</div>
+
+	            </div>
+	            
+	            
+            </div>
+
+        <div class="sidebar">
+            
+		    <div class="side-card-holder">        
+		            <section class="merchant-side-card merchant-other-blogs">
+		                <section class="merchant-side-section">
+		                    <h3 class="merchant-side-header">Resume</h3>
+		                </section>
+		                <section class="other-blogs">
+		                    
+		                        <a data-type="side-blog" class="other-blog" href="https://s3.amazonaws.com/certificates-siddharthshubhampal/Resume_Siddharth+Shubham+Pal.pdf" target="_blank">
+		                            <div class="blog-banner lazy" style='background-image:url(https://d1qp59yxlq7zhd.cloudfront.net/static/images/blank-placeholder.svg)' data-src="url(https://seekcomau.corewebdna.net.au/web_images/blogs/214/1458/What%20is%20a%20resume_940x485.jpg)" ></div>
+		                            <h5>Hire Me!</h5>
+		                        </a>
+		                </section>
+		            </section>
+		        
+		    </div>
+
+        </div>
+
+    </section>
+
+ 
+        <footer class="site-footer" style="bottom: 0px;
+	    left: 0px;
+	    right: 0px;
+	    margin-bottom: 0px;">
+            <div class="site-footer-container">
+                
+
+                <section class="footer-directory" style="padding: 0px">
+                    <p>Social</p>
+                   <section class="footer-social">
+                        <a target="_blank" href="https://www.facebook.com/siddharthshubhampal/"><img class="after-load" data-src='https://d1qp59yxlq7zhd.cloudfront.net/static/images/footer/facebook.svg' /></a>
+                        <a target="_blank" href="javascript:void(0)"><img class="after-load" data-src=https://d1qp59yxlq7zhd.cloudfront.net/static/images/footer/instagram.svg /></a>
+                        <a target="_blank" href="https://www.linkedin.com/in/siddharth-pal-6b891610b/">
+                            <img class="after-load" data-src='https://d1qp59yxlq7zhd.cloudfront.net/static/images/footer/linkedin.svg' />
+                        </a>
+                        <a target="_blank" href="javascript:void(0)"><img class="after-load" data-src='https://d1qp59yxlq7zhd.cloudfront.net/static/images/footer/twitter.svg' /></a>
+                    </section>
+                </section>
+            </div>
+        </footer>
+    
+
+    
+
+    <script type="text/javascript">
+    	function myfunc() {
+    		
+    		let pwd = document.getElementById('pwd').value;
+    		let myData = {"password":pwd}
+    		console.log(JSON.stringify(myData));
+    		$.ajax({
+    			type: "GET",
+    			url: "https://q9a3xtw10i.execute-api.us-east-1.amazonaws.com/dev?password="+encodeURIComponent(pwd),
+    			crossDomain: true,
+    			contentType: "application/JSON",
+    			dataType: "json",
+    			success: function(data, status){
+    				renderFunction(data, status);
+    			}
+    		})
+    	}
+
+    	function renderFunction(data, status){
+    		var result = '';
+    		data.forEach(function(dataz){
+    			result= result + `<div class="merchant-card-single">
+	                      
+	                            <div class="merchant-logo-holder lazy" data-src="url('')" style='background-image:url(https://d1qp59yxlq7zhd.cloudfront.net/static/images/blank-placeholder.svg)'  title=""></div>
+
+	                        <div class="merchant-name-address">
+	                            
+	                                <h3 class="merchant-name">`+dataz.key+`</h3>
+	                            
+	                                <h4 class="merchant-location">`+dataz.Result+`</h4>
+	                         
+	                                    <h5 class="subcategory-tag">`+dataz.Reason+`</h5>
+	                               
+	                        </div>
+	                        
+	                            <div class="`+dataz.Result+`">
+	                            </div>
+	                </div>`;
+    		})
+    		document.getElementById('resultDiv').innerHTML=result;
+    		console.log(result)
+    	}
+
+    </script>
+
+    <script>
+        var lazy = document.getElementsByClassName('lazy');
+        var afterLoadElements = document.getElementsByClassName('after-load');
+        var removeLazy = [];
+
+        registerListener('load', lazyLoad);
+        registerListener('scroll', lazyLoad);
+        registerListener('resize', lazyLoad);
+        registerListener('load', afterLoad);
+        registerListener('load', openAnounce);
+
+        function lazyLoad(){
+            lazy = document.getElementsByClassName('lazy');
+            for(var i=0; i<lazy.length; i++){
+                if(isInViewport(lazy[i])){
+                    if (lazy[i].getAttribute('data-src')){
+                        lazy[i].src = lazy[i].getAttribute('data-src');
+                        lazy[i].style.backgroundImage = lazy[i].getAttribute('data-src');
+                        removeLazy.push(lazy[i]);
+                        lazy[i].removeAttribute('data-src');
+                    }
+                }
+            }
+            cleanLazy();
         }
 
-        if (flag){
-        	response = key + ' <span style="color:green">Success</span>';
-        }else{
-        	response = key + ' <span style="color:red">Faliure</span> '+response;
+        function cleanLazy() {
+            for(var i=0; i<removeLazy.length; i++){
+                removeLazy[i].classList.remove('lazy');
+            }
+            removeLazy = [];
+            lazy = Array.prototype.filter.call(lazy, function(l){ return l.getAttribute('data-src');});
         }
-        document.getElementById('result').innerHTML=document.getElementById('result').innerHTML+'<br/>'+response;
-    })
 
-  }
-</script>
+        function isInViewport(el){
+            var rect = el.getBoundingClientRect();
+            
+            return (
+                rect.bottom >= 0 && 
+                rect.right >= 0 && 
+                rect.top <= (window.innerHeight || document.documentElement.clientHeight) && 
+                rect.left <= (window.innerWidth || document.documentElement.clientWidth)
+             );
+        }
+
+        function registerListener(event, func) {
+            if (window.addEventListener) {
+                window.addEventListener(event, func)
+            } else {
+                window.attachEvent('on' + event, func)
+            }
+        }
+
+        function afterLoad() {
+            for(var i=0; i<afterLoadElements.length; i++){
+                afterLoadElements[i].src = afterLoadElements[i].getAttribute('data-src');
+            }
+        }
+    </script>
+
+    
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+
 
 </body>
 </html>
