@@ -1,6 +1,17 @@
 # Magicpin Campus Drive Assignment 2019
 Assignment for Magicpin campus drive (profile: Application Developer)
 
+## Live Link: <a href="http://magicpin-assignment-jiit.s3-website.ap-south-1.amazonaws.com/" target="_blank" >http://magicpin-assignment-jiit.s3-website.ap-south-1.amazonaws.com/</a>
+
+
+## API
+I have developed API for this task. API supports GET and POST methods.
+```
+API: https://8dna95pv0e.execute-api.ap-south-1.amazonaws.com/dev
+GET: https://8dna95pv0e.execute-api.ap-south-1.amazonaws.com/dev?password=asdasd....
+POST: data:{"password": "asdasd..."}
+```
+
 ## Problem Statement
 You are writing authentication module for your first website. In order to ensure your
 users are not vulnerable to brute force attacks on weak passwords you want to help
@@ -32,3 +43,20 @@ Hint: Error messages for each check:
 3. Password must contain at least one letter from <set_that_failed>.
 4. Password cannot contain %!)(.
 
+## Solution
+I have made an API. Frontend is hosted on AWS S3. Frontend makes AJAX request to API Gateway and fetches response. I have used styling of magicpin.com as this assignment was for Magicpin.
+* Assumption: I have assumed that no password can start and end with space. In given example of problem statement, response of <b>" 1234567"</b> is <b>"1234567 Failure Password must contain at least one letter from a-z."</b>. This response trims space before " 1234567".
+
+### File Description
+| Files | Description |
+| ------ | ------ |
+| api.js | This is lambda function. Api is hosted using API GATEWAY. |
+| index.html | This is frontend of the webapp. This makes request to API and shows all data in html. |
+| _working_without_html.html | This is standalone html file. This does client side password verification and shows response in browser. |
+
+Developer
+----
+
+Siddharth Shubham Pal
+
++91-7007010679 / 8765221829
