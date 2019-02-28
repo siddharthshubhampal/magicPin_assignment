@@ -6,8 +6,8 @@ Assignment for Magicpin campus drive (profile: Application Developer)
 ## API
 I have developed API for this task. API supports GET and POST methods.
 ```
-API: https://q9a3xtw10i.execute-api.us-east-1.amazonaws.com/dev
-GET: https://q9a3xtw10i.execute-api.us-east-1.amazonaws.com/dev?password=asdasd....
+API: https://8dna95pv0e.execute-api.ap-south-1.amazonaws.com/dev
+GET: https://8dna95pv0e.execute-api.ap-south-1.amazonaws.com/dev?password=asdasd....
 POST: data:{"password": "asdasd..."}
 ```
 
