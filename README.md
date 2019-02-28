@@ -1,7 +1,7 @@
 # Magicpin Campus Drive Assignment 2019
 Assignment for Magicpin campus drive (profile: Application Developer)
 
-## Live Link: <a href="http://magicpin-assignment-jiit.s3-website.ap-south-1.amazonaws.com/" target="_blank">http://magicpin-assignment-jiit.s3-website.ap-south-1.amazonaws.com/</a>
+## Live Link: <a href="http://magicpin-assignment-jiit.s3-website.ap-south-1.amazonaws.com/" target="_blank" >http://magicpin-assignment-jiit.s3-website.ap-south-1.amazonaws.com/</a>
 
 
 ## API
