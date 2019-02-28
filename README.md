@@ -52,3 +52,10 @@ I have made an API. Frontend is hosted on AWS S3. Frontend makes AJAX request to
 | api.js | This is lambda function. Api is hosted using API GATEWAY. |
 | index.html | This is frontend of the webapp. This makes request to API and shows all data in html. |
 | _working_without_html.html | This is standalone html file. This does client side password verification and shows response in browser. |
+
+Developer
+----
+
+Siddharth Shubham Pal
+
++91-7007010679 / 8765221829
