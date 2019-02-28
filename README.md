@@ -1,6 +1,16 @@
 # Magicpin Campus Drive Assignment 2019
 Assignment for Magicpin campus drive (profile: Application Developer)
 
+## Live Link: http://magicpin-assignment-jiit.s3-website.ap-south-1.amazonaws.com/
+
+## API
+I have developed API for this task. API supports GET and POST methods.
+```
+API: https://q9a3xtw10i.execute-api.us-east-1.amazonaws.com/dev
+GET: https://q9a3xtw10i.execute-api.us-east-1.amazonaws.com/dev?password=asdasd....
+POST: data:{"password": "asdasd..."}
+```
+
 ## Problem Statement
 You are writing authentication module for your first website. In order to ensure your
 users are not vulnerable to brute force attacks on weak passwords you want to help
@@ -31,4 +41,7 @@ Hint: Error messages for each check:
 2. Password must be at max 12 characters long.
 3. Password must contain at least one letter from <set_that_failed>.
 4. Password cannot contain %!)(.
+
+## Solution
+I have made an API. Frontend is hosted on AWS S3. Frontend makes AJAX request to API Gateway and fetches response. I have used styling of magicpin.com as this assignment was for Magicpin.
 
