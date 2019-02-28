@@ -153,16 +153,17 @@
       	  	<div class="around-you-wrapper float-left">
       	  		<section class="related-searches">
 	                    <h3 class="search-header" style="margin: 8px 0px">Password</h3>
-	                    <div class="" style="padding: 10px 0px; ">
-	                     <input type="Password" name="pwd" id="pwd" style="width: 85%;padding: 8px 12px;box-sizing: border-box;border: 2px solid #ECEEF4; border-radius:8px"/>
-	                    <button style="padding: 10px 10px; border-radius: 50%; border: 1px solid #00ae28; background-color: #00ae28; color: white; float: right;margin:0px 15px;" onclick="myfunc()">GO</button>
-	                    </div>
-	                     <input type="checkbox" name="remember" ontoggle="">Show Password</input>
+	                 
+		                    <div class="" style="padding: 10px 0px; ">
+		                     <input type="Password" name="pwd" id="pwd" style="width: 85%;padding: 8px 12px;box-sizing: border-box;border: 2px solid #ECEEF4; border-radius:8px" autofocus/>
+		                    <button style="padding: 10px 10px; border-radius: 50%; border: 1px solid #00ae28; background-color: #00ae28; color: white; float: right;margin:0px 15px;" onclick="myfunc();">GO</button>
+		                    </div>
+		                     <input type="checkbox" name="remember" onclick="showPassword()">Show Password</input>
+	                
 	            </section>
 
             	<div class="around-you-result-inner clearfix" id="resultDiv">
 	              <div class="center"  style="padding-bottom: 40px">Enter the passwords seperated with comma and Click on GO button.</div>
-
 	            </div>
 	            
 	            
@@ -255,9 +256,19 @@
 	                </div>`;
     		})
     		document.getElementById('resultDiv').innerHTML=result;
-    		console.log(result)
-    	}
+    		console.log(result);
 
+    	}
+    </script>
+    <script type="text/javascript">
+    	function showPassword(){
+    		var x = document.getElementById("pwd");
+			  if (x.type === "password") {
+			    x.type = "text";
+			  } else {
+			    x.type = "password";
+			  }
+    	}
     </script>
 
     <script>
